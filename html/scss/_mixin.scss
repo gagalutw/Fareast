@@ -1,0 +1,77 @@
+$main-brown: #C38F5D;
+$main-red: #e72410;
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+  }
+  
+  /*---------------
+    How to use:
+  
+      @include size(w,h);
+  
+  ---------------*/
+  
+
+  @mixin transition-time-easeout {
+    transition: width .3s ease-in-out;
+  }
+
+  @mixin transition-w-easeout {
+    transition: transform .3s ease-in-out,width .3s ease-in-out;
+  }
+
+  @mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  @mixin center-none {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+
+  @mixin flex-center{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+  }
+  @mixin transition-hover{
+    transition: all 0.3s ease-out;
+  }
+
+  @mixin hover-effect {
+    background-color :$main-red;
+    color: #fff;
+  }
+
+  @mixin max-w1140 {
+    max-width: 1140px;
+  }
+  
+  /*---------------
+    How to use:
+  
+      @include center;
+  
+  ---------------*/
+  
+  @mixin aHover {
+    // 比照日本官網的hover樣式
+    opacity: .7;
+    text-decoration: underline;
+  }
+  
+  
+  /*---------------
+    How to use:
+  
+      @include aHover;
+  
+  ---------------*/
